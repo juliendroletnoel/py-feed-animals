@@ -7,10 +7,10 @@ class Animal:
         self.appetite = appetite
         self.is_hungry = is_hungry
 
-    def print_name(self):
+    def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
-    def feed(self):
+    def feed(self) -> None:
         if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
@@ -23,8 +23,8 @@ class Cat(Animal):
                  cat_name: str,
                  is_hungry: bool = True) -> None:
         super().__init__(cat_name, 3)
-        
-    def catch_mouse(self):
+
+    def catch_mouse(self) -> None:
         print("The hunt began!")
 
 
@@ -33,8 +33,8 @@ class Dog(Animal):
                  dog_name: str,
                  is_hungry: bool = True) -> None:
         super().__init__(dog_name, 7, is_hungry)
-        
-    def bring_slippers(self):
+
+    def bring_slippers(self) -> None:
         print("The slippers are delivered!")
 
 
